@@ -11,7 +11,7 @@ class Public::SessionsController < Devise::SessionsController
   end
 
   def reject_customer
-    @customer = Customer.find_by(email: paramas[:customer][:email])
+    @customer = Customer.find_by(email: params[:customer][:email])
     if @customer
       if @customer.valid_password?(params[:customer][:password]) && (@customer.is_deleted == false)
         redirect_to new_customer_registration_path

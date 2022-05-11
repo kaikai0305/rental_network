@@ -1,6 +1,6 @@
 class Admin::RoomsController < ApplicationController
    def index
-    @rooms = Room.all.page(params[:page])
+    @rooms = Room.all
    end
 
   def show
@@ -12,7 +12,7 @@ class Admin::RoomsController < ApplicationController
   end
 
   def create
-    @room_new = Room.new(product_params)
+    @room_new = Room.new(room_params)
     @room_new.save
     redirect_to admin_room_path(@room_new)
   end

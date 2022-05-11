@@ -7,7 +7,7 @@ class Customer < ApplicationRecord
   has_many :addresses, dependent: :destroy
 
   def active_for_authentication?
-    super && (is_deleted == false)
+    super && (is_removed == false)
   end
 
   validates :sur_name, presence: true

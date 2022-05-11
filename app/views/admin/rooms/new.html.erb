@@ -1,0 +1,25 @@
+<div class="container">
+    
+    <div class="row">
+        
+      <div class="col-xs-12">
+        <h1>部屋新規登録</h1>
+        <%= form_with model: @room_new, url: admin_rooms_path, method: :post do |f| %>
+        
+        　　　<div class="form-group">
+                <h4>部屋名</h4>
+                   <%= f.text_field :name %>
+            </div>
+            
+            <div class="form-group">
+                <h4>部屋の説明</h4>
+                   <%= f.text_area :caption %>
+            </div>
+            
+            <%= f.submit '新規登録', class:"btn btn-success" %>
+            
+        <% end %>
+        
+      </div>
+    </div>
+</div>

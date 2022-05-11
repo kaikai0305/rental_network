@@ -13,16 +13,16 @@
             <%= link_to "マイページ", customers_path %>
           </li>
           <li class="nav-item p-1">
-            <%= link_to "商品一覧", products_path %>
+
           </li>
           <li class="nav-item p-1">
-            <%= link_to "カート", cart_items_path %>
+
           </li>
           <li class="nav-item p-1">
             <%= link_to "ログアウト", destroy_customer_session_path, method: :delete %>
           </li>
 
-          <%= render 'layouts/search' %>
+
         <% elsif admin_signed_in? %>
           <li class="nav-item p-1">
             <%= link_to "商品一覧", admin_products_path %>
@@ -40,13 +40,13 @@
             <%= link_to "ログアウト",  destroy_admin_session_path, method: :delete %>
           </li>
 
-          <%= render 'layouts/search' %>
+
         <% else %>
           <li class="nav-item p-1">
           　<%= link_to "About", about_path %>
           </li>
           <li class="nav-item p-1">
-            <%= link_to "商品一覧", products_path %>
+
           </li>
           <li class="nav-item p-1">
             <%= link_to "新規登録", new_customer_registration_path %>
@@ -54,7 +54,7 @@
           <li class="nav-item p-1">
             <%= link_to "ログイン", new_customer_session_path %>
           </li>
-          <%= render 'layouts/search' %>
+
         <% end %>
         </ul>
       </div>
