@@ -1,0 +1,25 @@
+<div class="container">
+    
+    <div class="row">
+        
+      <div class="col-xs-12">
+        <h1>貸出物新規登録</h1>
+        <%= form_with model: @lending_new, url: admin_lendings_path, method: :post do |f| %>
+        
+        　　　<div class="form-group">
+                <h4>貸出物名</h4>
+                   <%= f.text_field :name %>
+            </div>
+            
+            <div class="form-group">
+                <h4>貸出物の説明</h4>
+                   <%= f.text_area :caption %>
+            </div>
+            
+            <%= f.submit '新規登録', class:"btn btn-success" %>
+            
+        <% end %>
+        
+      </div>
+    </div>
+</div>

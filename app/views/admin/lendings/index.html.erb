@@ -1,0 +1,35 @@
+<div class="container">
+ <div class="row">
+  <div class="col-xs-12">
+
+     <h1>貸出物一覧</h1>
+
+     <%= link_to new_admin_lending_path do %>
+      <i class="fas fa-plus-circle"></i>
+     <% end %>
+
+     <table class="table">
+        <thead class="table-light">
+         <tr>
+          <th>貸出物ID</th>
+          <th>貸出物名</th>
+          <th>説明</th>
+         </tr>
+       </thead>
+
+       <tbody>
+        <% @lendings.each do |lending| %>
+        <tr>
+         <td><%= lending.id %></td>
+
+         <td><%= link_to lending.name, admin_lending_path(lending) %></td>
+
+         <td><%= lending.caption %></td>
+        </tr>
+        <% end %>
+       </tbody>
+
+
+  </div>
+ </div>
+</div>

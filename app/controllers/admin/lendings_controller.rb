@@ -1,7 +1,7 @@
 class Admin::LendingsController < ApplicationController
-  
+
   def index
-    @lendings = Lending.all.page(params[:page])
+    @lendings = Lending.all
   end
 
   def show
@@ -10,7 +10,6 @@ class Admin::LendingsController < ApplicationController
 
   def new
     @lending_new = Lending.new
-    @genres = Genre.all
   end
 
   def create

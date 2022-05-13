@@ -10,8 +10,10 @@ Rails.application.routes.draw do
 
    namespace :admin do
     root 'homes#top'
+    resources :customers, only: [:index, :show, :edit, :update]
     resources :rooms, only: [:index, :show, :edit, :new, :create, :update]
     resources :lendings, only: [:index, :show, :edit, :new, :create, :update]
+    resources :reservations, only: [ :index, :show, :update]
   end
 
    scope module: :public do
@@ -20,6 +22,11 @@ Rails.application.routes.draw do
     resource :customers, only: [:show, :edit, :update]
     get 'customers/unsubscribe' => 'customers#unsubscribe', as: 'unsubscribe'
     patch 'customers/out' => 'customers#out', as: 'out'
+    post 'reservations/check'
+    get 'reservations/thanx'
+    resources :reservations, only: [ :index, :show, :new, :create]
+    resources :rooms, only: [:index, :show]
+    resources :lendings, only: [:index, :show]
    end
 
    get "search" => "searches#search"
