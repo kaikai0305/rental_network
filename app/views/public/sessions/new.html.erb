@@ -7,7 +7,6 @@
         <br>
         <br>
         <h2 style="width:460px;">会員の方はこちらからログイン</h2>
-
         <%= render "public/shared/error_messages", resource: @customer %>
 
         <%= form_with model: @customer, url: customer_session_path do |f| %>

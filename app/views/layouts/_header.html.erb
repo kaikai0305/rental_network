@@ -1,7 +1,7 @@
 <header class="shadow">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <%= link_to root_path do %><i class="fa-light fa-projector"></i>レンタル・ネットワーク<% end %>
+      <%= link_to root_path do %><i class="fa-solid fa-check"></i>レンタル・ネットワーク<% end %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -19,7 +19,7 @@
 　　　　　　<%= link_to "貸出物一覧", lendings_path %>
           </li>
           <li class="nav-item p-1">
-　　　　　　<%= link_to "予約ページ",new_reservatiom_path %>
+　　　　　　<%= link_to "予約ページ",new_reservation_path %>
           </li>
           <li class="nav-item p-1">
             <%= link_to "ログアウト", destroy_customer_session_path, method: :delete %>

@@ -31,7 +31,7 @@ class Admin::LendingsController < ApplicationController
   private
 
   def lending_params
-    params.require(:lending).permit(:name, :caption)
+    params.require(:lending).permit(:name,:quantity, :caption)
   end
 
 end

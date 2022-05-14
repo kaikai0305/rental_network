@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :admins,skip: [:registrations, :passwords] , controllers: {
   sessions: "admin/sessions"
 }
-  devise_for :customers,skip: [:passwords],  controllers: {
+  devise_for :customers, skip: [:passwords],  controllers: {
   registrations: "public/registrations",
   sessions: 'public/sessions'
 }
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
    scope module: :public do
     root 'homes#top'
     get 'about', to: 'homes#about'
-    resource :customers, only: [:show, :edit, :update]
+    resource :customers, only: [:show,:edit, :update]
     get 'customers/unsubscribe' => 'customers#unsubscribe', as: 'unsubscribe'
     patch 'customers/out' => 'customers#out', as: 'out'
     post 'reservations/check'
