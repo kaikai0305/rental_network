@@ -24,7 +24,7 @@
           <li class="nav-item p-1">
             <%= link_to "ログアウト", destroy_customer_session_path, method: :delete %>
           </li>
-
+          
 
         <% elsif admin_signed_in? %>
           <li class="nav-item p-1">
@@ -42,8 +42,8 @@
           <li class="nav-item p-1">
             <%= link_to "ログアウト",  destroy_admin_session_path, method: :delete %>
           </li>
-
-
+           
+            
         <% else %>
           <li class="nav-item p-1">
           　<%= link_to "About", about_path %>
@@ -60,7 +60,9 @@
           <li class="nav-item p-1">
             <%= link_to "ログイン", new_customer_session_path %>
           </li>
-
+        
+    
+        
         <% end %>
         </ul>
       </div>

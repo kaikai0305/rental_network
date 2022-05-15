@@ -1,0 +1,51 @@
+<div class="container takasa">
+  <div class="row">
+    <div class="col-xs-7">
+        <h2>予約情報入力</h2>
+        <br>
+        　 <div>
+             <%= form_with model: @reservation, url: reservations_check_path, method: :post, local: true do |f| %>
+          　   <table>
+                    <tr>
+                      <th>
+                        <%= f.label :利用部屋 %>
+                      </th>
+                      <td>
+                        <%= f.text_field :room_name %><br>
+                      </td>
+                    </tr>
+                 
+                    <tr>
+                      <th>
+                        <%= f.label :貸出物 %>
+                      </th>
+                      <td>
+                        <%= f.text_field :lending_id %><br>
+                        記入例：プロジェクター3台、スクリーン1台⇨プロジェクター×3、スクリーン×1<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <%= f.label :貸出日 %>
+                      </th>
+                      <td>
+                        <%= f.text_field :start %><br>
+                        記入例：2026年5月10日午前10時⇨2026.05.10.10:00<br>
+                      </td>
+                    </tr>
+                     <tr>
+                      <th>
+                        <%= f.label :返却日 %>
+                      </th>
+                      <td>
+                        <%= f.text_field :finish %><br>
+                         記入例：2026年5月10日午後17時⇨2026.05.10.17:00<br>
+                      </td>
+                    </tr>
+                </table>
+              <%= f.submit "予約を確定する", class:"btn btn-primary" %>
+             <% end %>
+        　　 </div>
+    </div>
+  </div>
+</div>

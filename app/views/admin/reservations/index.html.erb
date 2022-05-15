@@ -7,28 +7,23 @@
 
       <thead>
           <tr>
-          <th>購入日時</th>
-          <th>購入者</th>
-          <th>注文個数</th>
-          <th>注文ステータス</th>
+          <th>氏名</th>
+          <th>利用部屋</th>
+          <th>貸出物</th>
+          <th>貸出日</th>
+          <th>返却日</th>
+          <th></th>
           </tr>
       </thead>
 
       <tbody>
         <% @reservations.each do |reservation| %>
           <tr>
-          <td><%= link_to admin_reservation_path(reservation) do %>
-              <%= order.created_at.strftime('%Y/%m/%d %H:%M') %>
-              <% end %></td>
-          <td><%= order.customer.sur_name %><%= order.customer.first_name %></td>
-          <td>
-            <% quantity = 0 %>
-            <% order.order_details.each do |order_detail| %>
-            <% quantity += order_detail.amount %>
-            <% end %>
-            <%= quantity %>
-          </td>
-          <td><%= order.status_i18n %></td>
+          <td><</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
           </tr>
         <% end %>
       </tbody>

@@ -1,0 +1,13 @@
+<div class="nested-fields">
+  <div class="field">
+      <%= f.fields_for :reservation_lendings do |ff| %>
+    
+       <%= ff.number_field :quantity %>
+       <%= ff.text_field :memo %>
+      <% end %>
+  </div>
+  <div class="field">
+    <%= link_to_remove_association "貸出物物を削除", reservation_lendings %>
+  </div>
+  <hr>
+</div>

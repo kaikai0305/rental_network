@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-7">
+      <h2>予約完了</h2>
+        <br>
+       
+          <div>
+          　<p>氏名 : <%= @reservation.customer_id %></p>
+        　</div>
+        　<div>
+          　<p>利用部屋 : <%= @reservation.room_id %>
+        　</div>
+        　<div>
+          　<p>貸出物 : <%= @reservation.lending_id %></p>
+        　</div>
+        　<div>
+          　<p>貸出日 : <%= @reservation.start %></p>
+        　</div>
+        　<div>
+          　<p>返却日 : <%= @reservation.finish %></p>
+        　</div>
+
+       </div>
+    </div>
+  </div>
+</div>

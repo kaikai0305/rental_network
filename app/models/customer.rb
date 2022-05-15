@@ -17,4 +17,6 @@ class Customer < ApplicationRecord
   validates :address, presence: true
   validates :post_code, presence: true
   validates :phone_number, presence: true
+  
+   has_many :reservations, dependent: :destroy
 end

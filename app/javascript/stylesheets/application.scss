@@ -1,2 +1,15 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+
+
+th {
+  border-style: solid;
+  border-color: #aaa;
+  background-color: #ddd;
+}
+td {
+  padding: 10px;
+  border-style: solid;
+  border-color: #aaa;
+}
