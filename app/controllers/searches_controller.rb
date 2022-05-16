@@ -5,7 +5,8 @@ class SearchesController < ApplicationController
 
     if @range == "Room"
       @rooms = Room.looks(params[:search], params[:word])
-    else
+    else 
+      @selected_range = "Lending"
       @lendings = Lending.looks(params[:search], params[:word])
     end
   end

@@ -2,7 +2,7 @@
 
 <table class="table table-hover table-inverse">
 
-  <% if @range == "Room" %>
+  <% if @rooms.present?  %>
     <tbody>
       <% @rooms.each do |room| %>
         <tr>
@@ -11,12 +11,12 @@
         </tr>
       <% end %>
     </tbody>
-  <% else %>
-
+  <% elsif @lendings.present? %>
     <tbody>
       <% @lendings.each do |lending| %>
         <tr>
           <td><%= lending.name %></td>
+          <td><%= lending.quantity %></td>
           <td><%= lending.caption %></td>
         </tr>
       <% end %>

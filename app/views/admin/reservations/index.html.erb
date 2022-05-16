@@ -1,5 +1,6 @@
 <div class="container">
  <div class= "row" >
+   <div class="col-xs-12">
 
   <h2>予約履歴一覧</h2>
 
@@ -12,22 +13,26 @@
           <th>貸出物</th>
           <th>貸出日</th>
           <th>返却日</th>
-          <th></th>
           </tr>
       </thead>
 
       <tbody>
         <% @reservations.each do |reservation| %>
           <tr>
-          <td><</td>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
+          <td></td>
+            <% if @reservation.customer == current_customer %>
+             <%= link_to "キャンセル",reservation_path(@reservation.id), method: :delete, "data-confirm" => "本当にキャンセルしますか？", class:"btn btn-sm btn-danger" %>
+            <% end %>
+          </td>
           </tr>
         <% end %>
       </tbody>
 
     </table>
+    </div>
   </div>
 </div>

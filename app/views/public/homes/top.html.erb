@@ -1,13 +1,50 @@
-<div class="container takasa">
+<div class="container">
+
   <div class="row">
     <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
       <div class="col-12">
         <div class="mb-auto p-2 bd-highlight">
          <h4>ようこそレンタル・ネットワークへ！</h4>
-         <h4>このサイトは、部屋や機器を貸出予約できるサイトになります。</h4>
-         <h4>予約には会員登録が必要となります。</h4>
         </div>
       </div>
     </div>
-  </div>
+
+   <div class="col-8">
+     <h2>会員予約一覧</h2>
+     <table>
+
+      <thead>
+          <tr>
+          <th>氏名</th>
+          <th>利用部屋</th>
+          <th>貸出物</th>
+          <th>貸出日</th>
+          <th>返却日</th>
+          </tr>
+      </thead>
+
+      <tbody>
+        <% @reservations.each do |reservation| %>
+          <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+            <% if @reservation.customer == current_customer %>
+             <%= link_to "キャンセル",reservation_path(@reservation.id), method: :delete, "data-confirm" => "本当にキャンセルしますか？", class:"btn btn-sm btn-danger" %>
+            <% end %>
+          </td>
+          </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+     
+     <%= paginate @reservations %>
+   </div>
+   
+   
+    
+</div>
 

@@ -12,7 +12,8 @@
 
   <body class="d-flex flex-column vh-100">
     <%= render 'layouts/header' %>
-    <%= render 'searches/search' %>
+    <%= render partial: "searches/search", locals: { selected_range: @selected_range }%>
     <%= yield %>
   </body>
 </html>
+

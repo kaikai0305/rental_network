@@ -1,4 +1,5 @@
 class Reservation < ApplicationRecord
+   has_many :rooms
    has_many :reservations,through: :reservation_lendings
    has_many :reservation_lendings
 
