@@ -3,26 +3,21 @@ class Public::ReservationsController < ApplicationController
      @reservations = current_customer.reservations
    end
 
-  def show
-    @reservation = Reservation.find(params[:id])
-  end
 
   def new
     @reservation = Reservation.new
-
   end
 
   def check
     @reservation = Reservation.new(reservation_params)
-
   end
 
-  
+
 
   def create
     @reservation = Reservation.new(reservation_params)
       if @reservation.save
-       redirect_to reservations_thanx_path
+       redirect_to reservations_check_path
       else
        render :new
       end
@@ -31,6 +26,8 @@ class Public::ReservationsController < ApplicationController
     private
 
   def reservation_params
-    params.require(:reservation).permit(:customer_id, :room_id, :lending_id,:quantity, :start, :finish, reservation_lendings_attributes: [:id, :title, :_destroy])
+    params.require(:reservation).permit( :group, :customer_name, :room_name, :lending_name,:reason, :start, :finish)
   end
+
+
 end

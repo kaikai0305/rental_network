@@ -7,7 +7,6 @@
           <tr>
           <th>部屋</th>
           <th>貸出物</th>
-          <th>個数</th>
           <th>貸出日</th>
           <th>返却日</th>
           </tr>
@@ -19,12 +18,9 @@
           <td>
               <%= reservation.room_name %>
           </td>
-
-            <% reservation.reservation_lendings.each do |reservation_lendings| %>
-            <td><%= reservation_lendings.lending_id %></td>
-            <td><%= reservation_lendings.quantity %></td>
-            <td><%= reservation_lendings.memo %></td>
-            <% end %>
+          <td>
+            <%= reservation.lending_name %>
+          </td>
           <td><%= reservation.start %></td>
 
           <td><%= reservation.finish %></td>

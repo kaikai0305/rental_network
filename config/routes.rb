@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resource :customers, only: [:show,:edit, :update]
     get 'customers/unsubscribe' => 'customers#unsubscribe', as: 'unsubscribe'
     patch 'customers/out' => 'customers#out', as: 'out'
+    get 'reservations/thanx'
     post 'reservations/check'
     resources :reservations, only: [ :index,:edit, :new, :create, :destroy]
     resources :rooms, only: [:index, :show]

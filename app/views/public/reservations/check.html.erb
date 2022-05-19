@@ -3,15 +3,20 @@
     <div class="col-xs-7">
       <h2>予約完了</h2>
         <br>
-       
           <div>
-          　<p>氏名 : <%= @reservation.customer_id %></p>
+            <p>所属 : <%= @reservation.group %></p>
+          </div>
+          <div>
+          　<p>氏名 : <%= @reservation.customer_name %></p>
         　</div>
         　<div>
-          　<p>利用部屋 : <%= @reservation.room_id %>
+          　<p>利用部屋 : <%= @reservation.room_name %>
         　</div>
         　<div>
-          　<p>貸出物 : <%= @reservation.lending_id %></p>
+          　<p>貸出物 : <%= @reservation.lending_name %></p>
+        　</div>
+        　<div>
+        　 <p>利用目的 : <%= @reservation.reason %></p>
         　</div>
         　<div>
           　<p>貸出日 : <%= @reservation.start %></p>

@@ -1,6 +1,6 @@
 class Public::HomesController < ApplicationController
    def top
-    @reservations = Reservation.page(params[:page]).per(20)
+    @reservations = Reservation.all
    end
 
   def about
