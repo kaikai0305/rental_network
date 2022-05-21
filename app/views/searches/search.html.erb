@@ -3,18 +3,35 @@
 <table class="table table-hover table-inverse">
 
   <% if @rooms.present?  %>
+   <thead>
+     <tr>
+       <th>利用部屋ID</th>
+       <th>利用部屋</th>
+       <th>説明</th>
+     </tr>
+   </thead>
     <tbody>
       <% @rooms.each do |room| %>
         <tr>
+          <td><%= room.id %></td>
           <td><%= room.name %></td>
           <td><%= room.caption %></td>
         </tr>
       <% end %>
     </tbody>
   <% elsif @lendings.present? %>
+    <thead>
+      <tr>
+        <th>貸出物ID</th>
+        <th>貸出物品名</th>
+        <th>貸出可能個数</th>
+        <th>説明</th>
+      </tr>
+    </thead>
     <tbody>
       <% @lendings.each do |lending| %>
         <tr>
+          <td><%= lending.id %></td>
           <td><%= lending.name %></td>
           <td><%= lending.quantity %></td>
           <td><%= lending.caption %></td>

@@ -9,36 +9,37 @@
       </div>
     </div>
 
-   <div class="col-8">
+   <div class="col-14">
      <h2>会員予約一覧</h2>
      <table>
 
       <thead>
           <tr>
+          <th>利用者ID</th>
           <th>所属</th>
-          <th>氏名</th>
-          <th>利用部屋</th>
-          <th>貸出物</th>
+          <th>利用部屋ID</th>
+          <th>貸出物ID</th>
+          <th>個数</th>
           <th>利用目的</th>
           <th>貸出日</th>
           <th>返却日</th>
-          <th></th>
           </tr>
       </thead>
 
       <tbody>
         <% @reservations.each do |reservation| %>
           <tr>
+           <td><%= reservation.customer_id %></td>
           <td><%= reservation.group %></td>
-          <td><%= reservation.customer_name %></td>
-          <td><%= reservation.room_name %></td>
-          <td><%= reservation.lending_name %></td>
+          <td><%= reservation.room_id %></td>
+          <td><%= reservation.lending_id %></td>
+          <td><%= reservation.quantity %></td>
           <td><%= reservation.reason %></td>
           <td><%= reservation.start %></td>
           <td><%= reservation.finish %></td>
           <td>
-            <% if @reservation.customer == current_customer %>
-             <%= link_to "予約キャンセル",reservation_path(@reservation.id), method: :delete, "data-confirm" => "本当にキャンセルしますか？", class:"btn btn-sm btn-danger" %>
+            <% if reservation.customer_id == current_customer&.id %>
+             <%= link_to "予約キャンセル",reservation_path(reservation.id), method: :delete, "data-confirm" => "本当にキャンセルしますか？", class:"btn btn-sm btn-danger" %>
             <% end %>
           </td>
           </tr>
@@ -47,7 +48,7 @@
 
     </table>
 
-    
+
    </div>
 
 

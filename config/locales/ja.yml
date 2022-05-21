@@ -1,0 +1,7 @@
+  ja:
+    enums:
+      reservation:
+        quantity:
+          one: "1台"
+          two: "2台"
+          three: "3台"

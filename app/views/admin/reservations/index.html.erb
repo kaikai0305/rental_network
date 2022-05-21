@@ -8,9 +8,12 @@
 
       <thead>
           <tr>
-          <th>氏名</th>
-          <th>利用部屋</th>
-          <th>貸出物</th>
+          <th>会員ID</th>
+          <th>所属</th>
+          <th>利用部屋ID</th>
+          <th>貸出物ID</th>
+          <th>貸出個数</th>
+          <th>貸出理由</th>
           <th>貸出日</th>
           <th>返却日</th>
           </tr>
@@ -19,15 +22,14 @@
       <tbody>
         <% @reservations.each do |reservation| %>
           <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-            <% if @reservation.customer == current_customer %>
-             <%= link_to "キャンセル",reservation_path(@reservation.id), method: :delete, "data-confirm" => "本当にキャンセルしますか？", class:"btn btn-sm btn-danger" %>
-            <% end %>
-          </td>
+          <td><%= reservation.customer_id %></td>
+          <td><%= reservation.group %></td>
+          <td><%= reservation.room_id %></td>
+          <td><%= reservation.lending_id %></td>
+          <td><%= reservation.quantity %></td>
+          <td><%= reservation.reason %></td>
+          <td><%= reservation.start %></td>
+          <td><%= reservation.finish %></td>
           </tr>
         <% end %>
       </tbody>

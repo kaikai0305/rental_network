@@ -14,28 +14,27 @@
                         <%= f.text_field :group %><br>
                       </td>
                     </tr>
-                    <tr>
                       <th>
-                        <%= f.label :氏名 %><br>
+                        <%= f.label :利用部屋ID %><br>
                       </th>
                       <td>
-                        <%= f.text_field :customer_name %><br>
-                      </td>
-                    </tr>
-                      <th>
-                        <%= f.label :利用部屋 %><br>
-                      </th>
-                      <td>
-                        <%= f.text_field :room_name %><br>
+                        <%= f.text_field :room_id %><br>
                       </td>
                     </tr>
                     <tr>
                       <th>
-                        <%= f.label :貸出物 %>
+                        <%= f.label :貸出物ID %>
                       </th>
                       <td>
-                        <%= f.text_field :lending_name %><br>
-                        記入例:プロジェクター3台、スクリーン3台⇨プロジェクター(3) スクリーン(3)<br>
+                        <%= f.text_field :lending_id %><br>
+                      </td>
+                    </tr>
+                     <tr>
+                      <th>
+                        <%= f.label :個数 %>
+                      </th>
+                      <td>
+                        <%= f.number_field :quantity %>
                       </td>
                     </tr>
                     <tr>
@@ -65,7 +64,7 @@
                       </td>
                     </tr>
                 </table>
-              <%= f.submit "予約を確定する", class:"btn btn-primary" %>
+              <%= f.submit "予約情報を確認する", class:"btn btn-primary" %>
              <% end %>
         　　 </div>
     </div>
