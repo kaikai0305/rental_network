@@ -8,11 +8,11 @@
 
       <thead>
           <tr>
-          <th>会員ID</th>
+          <th>会員</th>
           <th>所属</th>
-          <th>利用部屋ID</th>
-          <th>貸出物ID</th>
-          <th>貸出個数</th>
+          <th>利用部屋</th>
+          <th>貸出物</th>
+          <th>個数</th>
           <th>貸出理由</th>
           <th>貸出日</th>
           <th>返却日</th>
@@ -22,10 +22,10 @@
       <tbody>
         <% @reservations.each do |reservation| %>
           <tr>
-          <td><%= reservation.customer_id %></td>
+          <td><%= reservation.customer.sur_name %><%= reeservation.customer.first_name %></td>
           <td><%= reservation.group %></td>
-          <td><%= reservation.room_id %></td>
-          <td><%= reservation.lending_id %></td>
+          <td><%= reservation.room.name %></td>
+          <td><%= reservation.lending.name %></td>
           <td><%= reservation.quantity %></td>
           <td><%= reservation.reason %></td>
           <td><%= reservation.start %></td>

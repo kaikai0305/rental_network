@@ -1,33 +1,38 @@
-<div>
-<h2>予約履歴一覧</h2>
+<div class="container takasa">
+  <div class="row">
+    <div class="col-xs-7">
+      <h2>予約履歴一覧</h2>
 
-    <table>
+          <table>
 
-      <thead>
-          <tr>
-          <th>部屋</th>
-          <th>貸出物</th>
-          <th>個数</th>
-          <th>貸出日</th>
-          <th>返却日</th>
-          </tr>
-      </thead>
+            <thead>
+                <tr>
+                <th>利用部屋</th>
+                <th>貸出物</th>
+                <th>個数</th>
+                <th>貸出日</th>
+                <th>返却日</th>
+                </tr>
+            </thead>
 
-       <tbody>
-        <% @reservations.each do |reservation| %>
-          <tr>
-          <td>
-              <%= reservation.room_name %>
-          </td>
-          <td>
-            <%= reservation.lending_name %>
-          </td>
-          <td><%= reservation.start %></td>
+             <tbody>
+              <% @reservations.each do |reservation| %>
+                <tr>
+                <td>
+                    <%= reservation.room.name %>
+                </td>
+                <td>
+                  <%= reservation.lending.name %>
+                </td>
+                <td><%= reservation.quantity %></td>
+                <td><%= reservation.start %></td>
 
-          <td><%= reservation.finish %></td>
-          </tr>
-        <% end %>
-      </tbody>
+                <td><%= reservation.finish %></td>
+                </tr>
+              <% end %>
+            </tbody>
 
-    </table>
+          </table>
+      </div>
+     </div>
   </div>
