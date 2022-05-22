@@ -1,6 +1,6 @@
 class Public::LendingsController < ApplicationController
   def index
-    @lendings = current_customer.reservations
+    @lendings = Lending.all
   end
 
   def show
