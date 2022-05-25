@@ -1,4 +1,5 @@
 class Public::LendingsController < ApplicationController
+  
   def index
     @lendings = Lending.all
   end

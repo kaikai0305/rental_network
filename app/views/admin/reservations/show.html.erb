@@ -8,7 +8,6 @@
 
       <thead>
           <tr>
-          <th>会員</th>
           <th>所属</th>
           <th>利用部屋</th>
           <th>貸出物</th>
@@ -20,9 +19,8 @@
       </thead>
 
       <tbody>
-        <% @reservations.each do |reservation| %>
+        <% @reservation.each do |reservation| %>
           <tr>
-          <td><%= reservation.customer.sur_name %><%= reservation.customer.first_name %></td>
           <td><%= reservation.group %></td>
           <td><%= reservation.room.name %></td>
           <td><%= reservation.lending.name %></td>
