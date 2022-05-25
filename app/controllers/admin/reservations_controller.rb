@@ -4,9 +4,7 @@ class Admin::ReservationsController < ApplicationController
      @reservations = Reservation.all
   end
 
-  def show
-    @reservation =  customer.reservations
-  end
+
 
 
 end
