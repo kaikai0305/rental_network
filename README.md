@@ -20,6 +20,8 @@
 ## 設計書
 ・ER図
 https://drive.google.com/file/d/1HWWn4ezVcjgC5JWLtdeIUqU1r5lfbRV7/view?usp=sharing
+・テスト仕様書
+https://docs.google.com/spreadsheets/d/1k5aZeuiQZwwvyCSvN4B4umH9UAf-pw12/edit?usp=sharing&ouid=117377642506322795708&rtpof=true&sd=true
 
 
 ## 開発環境
