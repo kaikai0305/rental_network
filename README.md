@@ -18,6 +18,8 @@
 ・音楽発表会を行うために、楽器やマイクの貸出予約・部屋の利用予約を行う。
 
 ## 設計書
+・ER図
+https://drive.google.com/file/d/1HWWn4ezVcjgC5JWLtdeIUqU1r5lfbRV7/view?usp=sharing
 
 
 ## 開発環境
